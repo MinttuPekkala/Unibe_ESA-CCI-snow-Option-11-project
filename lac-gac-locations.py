@@ -35,7 +35,7 @@ def get_area(area='all'):
         'Auyuittuq_Canada': [67.5, -65],       # Auyuittuq National Park, mountains
         'San_Rafael_South_America': [-46.76, 73,55],           # Parque Nacional Laguna San Rafael, glacier
         'Berlevåg_Norway': [70.85, 29.08],      # urban, desert
-        'Salekhard_Russia': [66.32, 66.37],           # urban, forest
+        'Karelia_Russia': [61.82, 33.24],           # agriculture, forest
         'Siberia_Russia': [63.32, 115.21],         # forest
     }
     if area == 'all':
