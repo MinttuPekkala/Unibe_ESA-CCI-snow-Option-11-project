@@ -1,0 +1,4 @@
+date,datatype,satellite,region,data
+19920101,gac,noaa11,San_Rafael_South_America,[0.0]
+19920102,gac,noaa11,San_Rafael_South_America,[0.0]
+19920103,gac,noaa11,San_Rafael_South_America,[nan]

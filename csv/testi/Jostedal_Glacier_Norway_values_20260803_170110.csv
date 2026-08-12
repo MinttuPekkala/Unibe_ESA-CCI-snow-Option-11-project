@@ -1,0 +1,7 @@
+date,datatype,satellite,region,data
+19960101,lac,noaa14,Jostedal_Glacier_Norway,"[nan, 81.0, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, 82.0, nan]"
+19960101,gac,noaa14,Jostedal_Glacier_Norway,[100.0]
+19960102,lac,noaa14,Jostedal_Glacier_Norway,"[nan, nan, nan, nan, nan, nan, nan, 41.0, nan, nan, nan, nan, nan, nan, nan, nan]"
+19960102,gac,noaa14,Jostedal_Glacier_Norway,[100.0]
+19960103,lac,noaa14,Jostedal_Glacier_Norway,"[nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]"
+19960103,gac,noaa14,Jostedal_Glacier_Norway,[100.0]

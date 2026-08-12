@@ -32,9 +32,9 @@ def get_area(area='all'):
     """
     coords_dict = {
         'Alaska_USA': [66.16, -153.37],                # Gates of the Arctic National Park, forest
-        'Auyuittuq_Canada': [67.5, -65],       # Auyuittuq National Park, mountains
-        'San_Rafael_South_America': [-46.76, 73,55],           # Parque Nacional Laguna San Rafael, glacier
-        'Berlevåg_Norway': [70.85, 29.08],      # urban, desert
+        'Auyuittuq_Canada': [67.5, -65],                 # Auyuittuq National Park, mountains
+        'San_Rafael_South_America': [-46.76, -73,55],           # Parque Nacional Laguna San Rafael, glacier
+        'Berlevåg_Norway': [70.85, 29.08],           # urban, desert
         'Karelia_Russia': [61.82, 33.24],           # agriculture, forest
         'Siberia_Russia': [63.32, 115.21],         # forest
     }
@@ -266,23 +266,35 @@ def build_datadict(data_directory):
 
     for datatype in os.listdir(data_directory):
         datatype_dir = os.path.join(data_directory, datatype)
+        if not os.path.isdir(datatype_dir):
+            continue
 
-        for year_dir in os.listdir(datatype_dir):
-            year_path = os.path.join(datatype_dir, year_dir)
-            if not os.path.isdir(year_path):
-                continue
-
-            if datatype_dir.endswith('lac'):
+        if datatype_dir.endswith('lac'):
+            # lac structure: data/lac/<year>/lac_scene.nc
+            for year_dir in os.listdir(datatype_dir):
+                year_path = os.path.join(datatype_dir, year_dir)
+                if not os.path.isdir(year_path):
+                    continue
                 subdir = year_path
-            elif datatype_dir.endswith('gac') and 'scfv' in os.listdir(year_path):
-                subdir = os.path.join(year_path, 'scfv')
-            else:
-                continue
+                sat_files = [file for file in os.listdir(subdir)
+                             if os.path.isfile(os.path.join(subdir, file))
+                             and extract_date(datatype, file)[1] in ('noaa11', 'noaa14')]
+                for file in sat_files:
+                    data_date, satellite = extract_date(datatype, file)
+                    scenes_dict[data_date][datatype][satellite].append(
+                        os.path.normpath(os.path.join(subdir, file)))
 
-            sat_files = [file for file in os.listdir(subdir) if extract_date(datatype, file)[1] in ('noaa11', 'noaa14')]
-            for file in sat_files:
-                data_date, satellite = extract_date(datatype, file)
-                scenes_dict[data_date][datatype][satellite].append(os.path.normpath(os.path.join(subdir, file)))
+        elif datatype_dir.endswith('gac'):
+            # gac structure: data/gac/scfv/gac_scfv_scene.nc (no year subfolder)
+            subdir = os.path.join(datatype_dir, 'scfv')
+            if os.path.isdir(subdir):
+                sat_files = [file for file in os.listdir(subdir)
+                             if os.path.isfile(os.path.join(subdir, file))
+                             and extract_date(datatype, file)[1] in ('noaa11', 'noaa14')]
+                for file in sat_files:
+                    data_date, satellite = extract_date(datatype, file)
+                    scenes_dict[data_date][datatype][satellite].append(
+                        os.path.normpath(os.path.join(subdir, file)))
 
     return scenes_dict
 

@@ -1,0 +1,7 @@
+date,datatype,satellite,region,data
+19960101,lac,noaa14,Siberia_Russia,"[54.0, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]"
+19960101,gac,noaa14,Siberia_Russia,[61.0]
+19960102,lac,noaa14,Siberia_Russia,"[nan, nan, nan, nan, 93.25, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]"
+19960102,gac,noaa14,Siberia_Russia,[100.0]
+19960103,lac,noaa14,Siberia_Russia,"[nan, nan, nan, nan, 60.5, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, 37.25, nan]"
+19960103,gac,noaa14,Siberia_Russia,[90.85713958740234]

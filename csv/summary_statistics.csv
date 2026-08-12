@@ -1,0 +1,13 @@
+region,satellite,datatype,mean,std,min,max,count
+Alaska_USA,noaa14,gac,,,,,0
+Alaska_USA,noaa14,lac,,,,,0
+Auyuittuq_Canada,noaa14,gac,,,,,0
+Auyuittuq_Canada,noaa14,lac,,,,,0
+Jostedal_Glacier_Norway,noaa14,gac,100.0,0.0,100.0,100.0,6
+Jostedal_Glacier_Norway,noaa14,lac,68.0,19.096247449870006,41.0,82.0,6
+Karelia_Russia,noaa14,gac,100.0,0.0,100.0,100.0,2
+Karelia_Russia,noaa14,lac,,,,,0
+San_Rafael_South_America,noaa14,gac,0.0,0.0,0.0,0.0,1
+San_Rafael_South_America,noaa14,lac,51.0,0.0,51.0,51.0,1
+Siberia_Russia,noaa14,gac,83.95237986246745,16.653463706675,61.0,100.0,3
+Siberia_Russia,noaa14,lac,61.25,20.329319959113242,37.25,93.25,4

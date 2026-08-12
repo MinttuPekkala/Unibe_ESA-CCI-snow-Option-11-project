@@ -1,0 +1,7 @@
+date,datatype,satellite,region,data
+19960101,lac,noaa14,Karelia_Russia,"[nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]"
+19960101,gac,noaa14,Karelia_Russia,[nan]
+19960102,lac,noaa14,Karelia_Russia,"[nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]"
+19960102,gac,noaa14,Karelia_Russia,[100.0]
+19960103,lac,noaa14,Karelia_Russia,"[nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]"
+19960103,gac,noaa14,Karelia_Russia,[nan]

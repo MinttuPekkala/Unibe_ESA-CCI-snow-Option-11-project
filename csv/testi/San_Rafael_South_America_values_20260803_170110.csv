@@ -1,0 +1,7 @@
+date,datatype,satellite,region,data
+19960101,lac,noaa14,San_Rafael_South_America,"[nan, nan, 51.0, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]"
+19960101,gac,noaa14,San_Rafael_South_America,[0.0]
+19960102,lac,noaa14,San_Rafael_South_America,"[nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]"
+19960102,gac,noaa14,San_Rafael_South_America,[nan]
+19960103,lac,noaa14,San_Rafael_South_America,"[nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]"
+19960103,gac,noaa14,San_Rafael_South_America,[nan]
